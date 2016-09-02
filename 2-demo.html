@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;}
+	input{background: none;}
+	p {padding: 20px;}
+	#div1{width: 100px;height:100px;border:5px solid black;margin-left:20px;}
+	#dady{ display: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #666;
+        opacity: 0.8;
+        filter: alpha(opacity=80);
+        z-index: 1;}
+	#div2{display:none;position:absolute;left: 40%;top:25%;width:300px;height:220px;border:5px solid black;background: #FFF;z-index: 2;}
+	span{font:20px/30px "宋体";}
+	#div2 input{border: 1px solid #ccc;width:55px;height:25px;}
+	#btn1{background-color: red;}
+	#btn2{background: yellow;}
+	#btn3{background: green;}
+	.btn4{margin-left:100px;}
+	</style>
+	<script>
+		window.onload=function(){
+			var oBtn=document.getElementById('btna');
+			var oBtn1=document.getElementById('btn1');
+			var oBtn2=document.getElementById('btn2');
+			var oBtn3=document.getElementById('btn3');
+			var oBtn4=document.getElementById('btn4');
+			var oBg1=document.getElementById('bg1');
+			var oBg2=document.getElementById('bg2');
+			var oBg3=document.getElementById('bg3');
+			var oBg4=document.getElementById('bg4');
+			var oBg5=document.getElementById('bg5');
+			var oBg6=document.getElementById('bg6');
+			var oDiv2=document.getElementById('div2');
+			var oDiv1=document.getElementById('div1');
+			var oDivd=document.getElementById('dady');
+			var oBa=document.getElementById('back');
+
+			oBtn.onclick=function(){
+				oDiv2.style.display='block';
+				oDivd.style.display='block';
+			}
+
+			oBtn1.onclick=function(){
+				oDiv1.style.background='red';
+			}
+			oBtn2.onclick=function(){
+				oDiv1.style.background='yellow';
+			}
+			oBtn3.onclick=function(){
+				oDiv1.style.background='blue';
+			}
+			oBg1.onclick=function(){
+				oDiv1.style.width='200px'
+			}
+			oBg2.onclick=function(){
+				oDiv1.style.width='300px'
+			}
+			oBg3.onclick=function(){
+				oDiv1.style.width='400px'
+			}
+			oBg4.onclick=function(){
+				oDiv1.style.height='200px'
+			}
+			oBg5.onclick=function(){
+				oDiv1.style.height='300px'
+			}
+			oBg6.onclick=function(){
+				oDiv1.style.height='400px'
+			}
+			oBtn4.onclick=function(){
+		 	oDiv1.style = 'none';
+			}	
+			oBa.onclick=function(){
+				oDiv2.style.display='none';
+				oDivd.style.display='none';
+			}
+
+		}
+
+	</script>
+</head>
+<body>
+	<p>请为下面的div设置样式：<input id="btna" type="button" value="点击设置样式"></p>
+	<div id="div1"></div>
+	<div id="dady"></div>
+	<div id="div2">
+		<span>选择背景: <input type="button" id="btn1" value="红"> <input type="button" id="btn2" value="黄"> <input type="button" id="btn3" value="绿"></span><br><br>
+		<span>选择宽度: <input type="button" id='bg1' value="200"> <input type="button" id='bg2' value="300"> <input type="button" id='bg3' value="400"></span><br><br>
+		<span>选择高度: <input type="button" id='bg4' value="200"> <input type="button" id='bg5' value="300"> <input type="button" id='bg6' value="400"></span><br><br><br>
+		<input class="btn4" id="btn4" type="button" value="恢复">
+		<input id="back" type="button" value="确定">
+	
+</div>
+</body>
+</html>
