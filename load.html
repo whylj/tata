@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    * {margin: 0; padding: 0;}
+    
+    .content { 
+        margin: 50px auto;
+        width: 900px;    
+        min-height: 200px;      
+        padding: 15px;    
+        color: #0d5b64;
+        font-weight: bolder;    
+        border-radius: 10px;
+        font-family: "微软雅黑";}
+    .h{
+        margin:50px auto;
+        margin-left: 200px;
+    }
+    a{
+        text-decoration: none;
+        color:#25f2f4;
+    }
+    a:hover{
+        color:red;
+    }
+    </style>
+</head>
+<body>
+    <div class="content" id="content"></div>
+    <script>
+        //用来输出的字符串
+        var myStr = "<h1 class='h'>利用github搭建自己的个人网站</h1><p>首先你需要注册一个属于自己的github账号，然后下载一个github客户端:<a href='https://windows.github.com/' target='_black'>客户端下载地址</a><br><br></p><p>下载好必要的文件之后,打开客户端，点击左上角的加号选择Create创建一个新的项目。之后，你可以选用本地的编码工具编写好属于你自己的网页，将文件放入你建立好的项目中，真正的难点大概是在如何创建一个合格大气受人喜爱的网页，这需要你有一定的审美和设计意识，当然，最重要的一定是你得知道怎么样编写你的源码</p><br><p>传入成功之后就可以在客户端的Changes中确认每一次改写的内容，方便以后了解改动的详情。这一切都完成之后，就可以把客户端的内容与网页内容同步了，右上角的Sync按钮就是干这个的。接着你可以来到网页上的github主页，点开你刚刚上传的项目，选择setting选项，在GitHub Pages这一栏你可以发现你上传的网站链接，当然如果你想把这个网站设置为属于你自己的域名也是可以的，那需要你进行域名的购买和对它进行解析。具体的可以在进行搜搜有专门的教程，我做到的就到这一步为止了</p><br><hr><br><h2>关于我的网站</h2><br><p>第一次搭建一个完整的网站，我还是套用了一下别人的模板，当然，其间也出过很多的问题，网站整体运用到的知识其实十分的基础，包括利用绝对定位固定导航栏、自适应布局、a标签定位锚点和外部链接、外部链接文字样式还有一些动态的JS滑动展开定时器等效果，在这里把我遇到的一些想法和实施遇到的问题发布出来:</p><br><p>1.代码的编写一定要保持一个边写边测试的习惯，不然当你编到最后的时候你再回头来检查自己的代码会发现让人头大，尤其是代码行数量很多的时候。<br></p><p>2.自己编代码的时候一定要合理的运用空格空行和对齐以及命名的语义化，这样才能让别人看到你的代码和你自己检查自己的代码的时候感觉舒服。</p><br><p>3.在编写展开收缩的简单代码的时候，对于双引号和单引号的输入不明确导致传入参数的失败，还是在别人的观察下发现的这个问题</p><br><p>未完待续---</p>";  
+        //打印函数，反复截取myStr字符串，每一次都比前一次多截取一个字符，然后反复输出到页面中
+        var print = function (content, str, speed) { 
+            var count = 0;   
+            var timer = null; 
+
+             timer = setInterval(function () { 
+                    if (count >= str.length) { 
+                        clearInterval(timer);       
+                    }else { 
+                        content.innerHTML = str.substring(0, count);
+                        count++;        
+                    }    }, speed);} 
+
+             onload = function () {
+                 var oContent = document.getElementById("content"); 
+                print(oContent, myStr, 10);
+            }
+          
+    </script>
+</body>
+</html>

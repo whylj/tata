@@ -6,7 +6,7 @@
 	<style>
 	#div1{height: 620px;
 			width: 300px;
-			background: url("img/mobile.png") no-repeat center center;
+			background: url("../img/mobile.png") no-repeat center center;
 			margin: auto;
 			position: relative;}
 	#div2{			height: 375px;
@@ -85,10 +85,10 @@
 
 			oImg.onclick=function(){
 			if(onOff){
-				oImg.src='img/1-2.jpg';
+				oImg.src='../img/1-2.jpg';
 				onOff=false;
 			}else{
-				oImg.src='img/1-1.jpg';
+				oImg.src='../img/1-1.jpg';
 				onOff=true;
 			}
 			}
@@ -97,9 +97,9 @@
 		  	if (oInp.value=='') {
 		  		alert('写点什么')
 		  	}else if(onOff){
-		  		oDiv2.innerHTML='<p style="text-align: right"><span style="background: #eee">' + oInp.value + '</span>' + '<img src="img/1-1.jpg">' + '</p>'+oDiv2.innerHTML ;
+		  		oDiv2.innerHTML='<p style="text-align: right"><span style="background: #eee">' + oInp.value + '</span>' + '<img src="../img/1-1.jpg">' + '</p>'+oDiv2.innerHTML ;
 		  	}else{
-		  		oDiv2.innerHTML='<p style="text-align: right"><span style="background: #eee">' + oInp.value + '</span>' + '<img src="img/1-2.jpg">' + '</p>'+oDiv2.innerHTML ;
+		  		oDiv2.innerHTML='<p style="text-align: left"><span style="background: #eee">' + oInp.value + '</span>' + '<img src="../img/1-2.jpg">' + '</p>'+oDiv2.innerHTML ;
 		  	}
 		  }
 
@@ -111,7 +111,7 @@
 		<div id="div1">
 		<div id="div2"></div>
 		<p id="footer">
-			<img id="avatar" src="img/1-1.jpg">
+			<img id="avatar" src="../img/1-1.jpg">
 			<input id="message" type="text" placeholder="选头像、输文字、点发送">
 			<a id="send" href="javascript:">发送</a>
 		</p>	
