@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fall in love 2 years</title>
+    <style>
+    * {margin: 0; padding: 0;}
+    
+    .content { 
+        /*background:url("timg.gif");*/
+        background:url("img/timg.gif");
+        margin: 50px auto;
+        width: 900px;
+        height: 400px;    
+        min-height: 200px;      
+        padding: 15px;    
+        color: black;
+        font-weight: bolder;    
+        border-radius: 10px;
+        font-family: "微软雅黑";}
+    .h{
+        margin:50px auto;
+        margin-left: 200px;
+    }
+    </style>
+</head>
+<body>
+    <div class="content" id="content"></div>
+    <script>
+        //用来输出的字符串
+       
+       var myStr="明天就在一起两年了，两年时间说长不长说短不短，我们也一起经历了很多事，现在在这边也是想你想你想你，有时候也会想有没有更好的办法什么的能在你身边一起过得更好一点，然后又自己跟自己加油鼓劲，现在变得更好以后才能让老婆过得轻松一点，让我们以后能过上想过的日子。<p><br>秋天是四季里面我最喜欢的，在这个时节我们相爱，更加让我对它感情独特，我们一起经历过了那么多事情，也吵过架闹过别扭，但还是甜甜蜜蜜恩恩爱阿秀别人一脸更多对不对，我肯定还有挺多不好的地方，有时候我自己不知道，宝宝不要自己闷着生我的气，觉得我哪里不好就告诉我，我下回就注意改正，不能经常见面但是我们要多多沟通，工作的事儿我可能不能给你提多少意见，但以后难受的时候还是要说给我听，我就听着安慰安慰你不会再随便指挥，生活里面多多注意自己身体，工作太辛苦不要再病了胃疼感冒什么的，难受起来也没人陪着我心疼也没什么用。宝宝有时候就是犟脾气，自己气自己自己伤害自己的事儿少干，以后有空我们就一起看一部电影，强制性让我老婆抽时间休息一下不要变成一个工作狂，以后演变成一个活脱脱的御姐女强人把我压制得不要不要的那不行知道不。</p><br><p>相思相见知何日，此时此刻难为情。以前在学校，天天见，夜夜想；后来上班了，周周见就天天想；月月见分分想；现在不知道什么时候见只能呼吸的时候想一想了，为了能更快跟老婆在一起过上没羞没臊幸福的小日子🙈现在要天天加油，刻苦锻炼，争取早一点能够去给我老婆一个幸福的生活。</p><br><p>我们相见，想念，相爱到今天，我感觉十分的幸福，感谢老婆，让我无论在哪里都能感觉到这个世界上还有一颗心在我这里（嗯，我的也在你那里），让我不断不断的支持我奋斗下去的勇气。我爱你</p>"
+        //打印函数，反复截取myStr字符串，每一次都比前一次多截取一个字符，然后反复输出到页面中
+        var print = function (content, str, speed) { 
+            var count = 0;   
+            var timer = null; 
+
+             timer = setInterval(function () { 
+                    if (count >= str.length) { 
+                        clearInterval(timer);       
+                    }else { 
+                        content.innerHTML = str.substring(0, count);
+                        count++;        
+                    }    }, speed);} 
+
+             onload = function () {
+                 var oContent = document.getElementById("content"); 
+                print(oContent, myStr, 400);
+            }
+          
+    </script>
+</body>
+</html>
